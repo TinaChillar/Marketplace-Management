@@ -1,0 +1,33 @@
+body{
+	background: #f2f2f2;
+	font-family: 'Lato', sans-serif;
+}
+
+
+.form-container{
+	border: 1px solid #ccc;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	background: #fff;
+	border-radius:3px ;
+	padding: 15px 15px ;
+	margin-top: 13vh;
+	margin-bottom: 10vh;
+	background: white;
+}
+
+#signup-link{
+	float: right;
+}
+
+#signup, #login{
+	display: none;
+}
+
+#login.show, #signup.show{
+	display: block;
+}
+
+#login-link, #signup-link{
+	cursor: pointer;
+}
+

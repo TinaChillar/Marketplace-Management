@@ -1,0 +1,106 @@
+body{
+	background: #f2f2f2;
+	font-family: 'Lato', sans-serif;
+	font-size: 12px;
+
+}
+
+
+.row{
+	padding:5px 0px 5px 0px;
+}
+
+.topbar-right-menu{
+	display: inline-flex;
+}
+
+.list-item-topbar{
+	padding:0px 10px 0px 10px;
+	color: white;
+	font-size: 1rem;
+}
+
+.list-item-topbar:hover{
+	opacity:0.8;
+	cursor: pointer;
+
+}
+#header-nav{
+	background-color: #263238;
+
+}
+
+.topnav{
+	background-color: #fff;
+}
+.navbar-brand{
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+.navbar .navbar-toggler{
+
+	font-size: 1rem;
+	float: left;
+
+}
+
+.right-title{
+	float: right;
+}
+
+.topnav .topnav-menu{
+	padding: 0;
+	margin: 0;
+}
+
+
+.nav-item{
+	padding: 10px 15px 8px 15px ;
+	font-size: 1.05rem;
+	
+}
+
+.nav-item:hover{
+	cursor: pointer;
+	border-bottom: 2px solid orange;
+}
+
+.nav-item.selected{
+	border-bottom: 2px solid orange;
+}
+
+.card-body{
+	padding:0.5rem;
+
+}
+
+.card{
+	border: none;
+	border-radius: 0;
+}
+
+
+
+.form-container{
+
+	border: 1px solid #ccc;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	background: #fff;
+	border-radius:3px ;
+	padding: 15px 15px ;
+	margin-top: 5vh;
+	margin-bottom: 10vh;
+	background: white;
+
+}
+
+label{
+	font-size: 0.9rem;
+}
+
+.form-heading{
+	border-bottom: 1px solid orange;
+	padding-bottom: 5px;
+	margin-bottom: 15px;
+	margin-top: 10px;
+}
