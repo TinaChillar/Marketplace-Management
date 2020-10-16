@@ -94,13 +94,15 @@ body{
 
 }
 
-label{
-	font-size: 0.9rem;
-}
 
 .form-heading{
 	border-bottom: 1px solid orange;
 	padding-bottom: 5px;
 	margin-bottom: 15px;
 	margin-top: 10px;
+}
+
+
+label{
+	font-size: 0.9rem;
 }

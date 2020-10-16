@@ -13,8 +13,10 @@
 					</button>
 
 					<ul class="list-unstyled topbar-right-menu mb-0">
-						<li class="list-item-topbar" id="uname"></li>
-						<li class="list-item-topbar" id="logout">Logout</li>
+						<li class="list-item-topbar" id="uname">
+                                                        <script type="text/javascript"> document.getElementById("uname").innerHTML = "Hi, " + localStorage.getItem("Uname");</script>
+                                                </li>
+						<li class="list-item-topbar" id="logout"><a href="LoginSignup.html" >Logout </a></li>
 					</ul>	
 
 				</div>

@@ -20,26 +20,26 @@ window.onload = function () {
 
 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
+  dataPointWidth: 20,
+  zoomEnabeled: true,
 	theme: "light2",
 	axisY:{
 		includeZero: false
 	},
 	data: [{        
-		type: "line",
+		type: "column",
+    color: "#014D65",
+
       	indexLabelFontSize: 16,
 		dataPoints: [
-			{ y: 450 },
-			{ y: 414},
-			{ y: 520},
-			{ y: 460 },
-			{ y: 450 },
-			{ y: 500 },
-			{ y: 480 },
-			{ y: 480 },
-			{ y: 410 },
-			{ y: 500 },
-			{ y: 480 },
-			{ y: 510 }
+			{ y: 450, label: "Slot 1"},
+			{ y: 414, label: "Slot 2"},
+			{ y: 520, label: "Slot 3"},
+			{ y: 460, label: "Slot 4" },
+			{ y: 450, label: "Slot 5" },
+			{ y: 500, label: "Slot 6" },
+			{ y: 480, label: "Slot 7" },
+			{ y: 480, label: "Slot 8" }
 		]
 	}]
 });
@@ -47,7 +47,7 @@ chart.render();
 
 }
 
-//document.getElementById("uname").innerHTML = "Hello, " + localStorage.getItem("Uname");
+
 
 
 $( "#submit4" ).click(function( event ) {
@@ -64,11 +64,11 @@ $( "#submit4" ).click(function( event ) {
             diff = Math.floor((d2 - d1) / 86400000); // ms per day
       }
 
-  console.log(d1.isMoment());
+  //console.log(d1.isMoment());
 
  $.ajax({
     type: "POST",
-    url: "http://18.219.140.201:9000/authority/slots",
+    url: "https://cors-anywhere.herokuapp.com/http://13.233.215.43:8765/marketplace/authority/slots",
     data: {
     	"userName" : localStorage.getItem("Uname"),
     	"slots" : "6"

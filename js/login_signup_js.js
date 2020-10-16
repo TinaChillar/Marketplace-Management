@@ -21,7 +21,7 @@ loginBtn.addEventListener("click", function(){
 
 
 //Login Request
-var authtoken = "tina";
+
 
 $( "#loginBtn" ).click(function( event ) {
  
@@ -48,17 +48,16 @@ $( "#loginBtn" ).click(function( event ) {
 
   $.ajax({
     type: "POST",
-    url: "https://cors-anywhere.herokuapp.com/http://18.224.1.190:8080/login/authority",
-   
-  headers: { "Authorization": "Bearer "+ localStorage.getItem("authToken")},
+    url: "https://cors-anywhere.herokuapp.com/http://13.233.215.43:8765/marketplace/login/authority",
+    headers: { "Authorization": 'Bearer ' + localStorage.getItem('authToken')},
     data: formData,
     dataType: "json",
     success: function(response){
       console.log(response);
 
     	if(response.error == false){
-        localStorage.setItem("Uname", formData.username);
-        //window.location.replace("http://localhost:3000/Dashboard1.html");
+
+        window.location.replace("http://localhost:3000/Dashboard1.html");
       }	
     },
     error: function( jqXhr, textStatus, errorThrown ){
@@ -95,12 +94,20 @@ $( "#signupBtn" ).click(function( event ) {
   $.ajax({
 
     type: "POST",
-    url: "https://cors-anywhere.herokuapp.com/http://18.224.1.190:8080/register/authority", 
+    url: "https://cors-anywhere.herokuapp.com/http://13.233.215.43:8765/marketplace/register/authority", 
     data: formData,
     dataType: "json",
     success: function(response){
 
       console.log(response);
+      if(response.error ==false){
+        localStorage.setItem("Uname", formData.usernameMarketplaceRegister);
+        //localStorage.setItem("Pass", formData.passwordMarketplaceRegister);
+
+
+        window.location.replace("http://localhost:3000/LoginSignup.html");
+      
+      }
 
     },
     error: function( jqXhr, textStatus, errorThrown ){
@@ -119,8 +126,8 @@ $( "#authenticateBtn" ).click(function( event ) {
   event.preventDefault();
 
   var formData = {
-    "username": "lol",
-    "password" : "haha"
+    "username": $('input[name=username]').val(),
+    "password" : $('input[name=password]').val()
   }
 
 
@@ -129,7 +136,7 @@ $( "#authenticateBtn" ).click(function( event ) {
 
   $.ajax({
     type: "POST",
-    url: "http://18.224.1.190:8080/authenticate",
+    url: "https://cors-anywhere.herokuapp.com/http://13.233.215.43:8765/marketplace/authenticate",
     data: formData,
     dataType: "json",
     success: function(response){
@@ -139,8 +146,6 @@ $( "#authenticateBtn" ).click(function( event ) {
       if(!response.error){
         localStorage.setItem("authToken", response.token);
         console.log(response.token);
-        authtoken = response.token;
-        console.log(authtoken);
 
       }
     },
